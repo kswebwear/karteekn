@@ -30,10 +30,10 @@ function TwitterIcon() {
   )
 }
 
-const socialLinks = [
-  { href: 'https://github.com/karteekn', label: 'GitHub', Icon: GitHubIcon },
-  { href: 'https://linkedin.com/in/karteekn', label: 'LinkedIn', Icon: LinkedInIcon },
-  { href: 'https://x.com/karteekn', label: 'Twitter/X', Icon: TwitterIcon },
+const socialLinks: { label: string; Icon: () => JSX.Element }[] = [
+  { label: 'GitHub', Icon: GitHubIcon },
+  { label: 'LinkedIn', Icon: LinkedInIcon },
+  { label: 'Twitter/X', Icon: TwitterIcon },
 ]
 
 export default function Footer() {
@@ -54,17 +54,14 @@ export default function Footer() {
           </nav>
 
           <div className="flex items-center gap-4">
-            {socialLinks.map(({ href, label, Icon }) => (
-              <a
-                key={href}
-                href={href}
-                target="_blank"
-                rel="noopener noreferrer"
+            {socialLinks.map(({ label, Icon }) => (
+              <span
+                key={label}
                 aria-label={label}
-                className="text-gray-400 transition-colors hover:text-amber-500"
+                className="text-gray-600"
               >
                 <Icon />
-              </a>
+              </span>
             ))}
           </div>
         </div>

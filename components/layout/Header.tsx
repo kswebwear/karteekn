@@ -3,7 +3,6 @@
 import { useState } from 'react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import ThemeToggle from '@/components/shared/ThemeToggle'
 
 const navLinks = [
   { href: '/', label: 'Home' },
@@ -40,12 +39,10 @@ export default function Header() {
               {link.label}
             </Link>
           ))}
-          <ThemeToggle />
         </nav>
 
         {/* Mobile controls */}
         <div className="flex items-center gap-3 md:hidden">
-          <ThemeToggle />
           <button
             onClick={() => setMenuOpen(!menuOpen)}
             aria-label="Toggle menu"
