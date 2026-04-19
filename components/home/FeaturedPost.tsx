@@ -52,11 +52,15 @@ export default function FeaturedPost({ post }: FeaturedPostProps) {
             )}
 
             <div className="mt-6 flex items-center gap-3">
-              <time className="text-sm text-gray-500" dateTime={post.published_at}>
+              <time className="text-sm text-gray-400" dateTime={post.published_at}>
                 {formatDate(post.published_at)}
               </time>
-              <span className="text-gray-700">·</span>
-              <ReadingTime minutes={post.reading_time} />
+              {post.reading_time && (
+                <>
+                  <span className="text-gray-700">·</span>
+                  <ReadingTime minutes={post.reading_time} />
+                </>
+              )}
             </div>
 
             <span className="mt-6 inline-flex items-center gap-1 text-sm text-amber-500 transition-gap group-hover:gap-2">

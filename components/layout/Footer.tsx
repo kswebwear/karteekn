@@ -46,7 +46,7 @@ export default function Footer() {
               <Link
                 key={link.href}
                 href={link.href}
-                className="text-sm text-gray-500 transition-colors hover:text-amber-500"
+                className="text-sm text-gray-400 transition-colors hover:text-amber-500"
               >
                 {link.label}
               </Link>
@@ -61,7 +61,7 @@ export default function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label={label}
-                className="text-gray-600 transition-colors hover:text-amber-500"
+                className="text-gray-400 transition-colors hover:text-amber-500"
               >
                 <Icon />
               </a>
@@ -70,7 +70,7 @@ export default function Footer() {
         </div>
 
         <div className="mt-8 border-t border-[#2a2a2a] pt-8 text-center">
-          <p className="text-sm text-gray-600">
+          <p className="text-sm text-gray-400">
             © {new Date().getFullYear()} Karteek N. All rights reserved.
           </p>
         </div>

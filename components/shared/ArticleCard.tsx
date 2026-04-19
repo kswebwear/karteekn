@@ -41,7 +41,7 @@ export default function ArticleCard({ post }: ArticleCardProps) {
           )}
 
           <div className="flex items-center gap-3 pt-1">
-            <time className="text-xs text-gray-600" dateTime={post.published_at}>
+            <time className="text-xs text-gray-400" dateTime={post.published_at}>
               {formatDate(post.published_at)}
             </time>
             {post.reading_time && (
