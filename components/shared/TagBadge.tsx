@@ -8,7 +8,7 @@ interface TagBadgeProps {
 
 export default function TagBadge({ tag, asLink = true }: TagBadgeProps) {
   const classes =
-    'inline-block rounded px-2 py-0.5 text-xs font-medium text-amber-500 bg-amber-500/10 transition-colors hover:bg-amber-500/20'
+    'inline-block w-fit rounded px-2 py-0.5 text-xs font-medium text-amber-500 bg-amber-500/10 transition-colors hover:bg-amber-500/20'
 
   if (!asLink) {
     return <span className={classes}>#{tag.name}</span>

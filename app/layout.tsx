@@ -1,13 +1,13 @@
 import type { Metadata } from 'next'
-import { Instrument_Serif, IBM_Plex_Mono } from 'next/font/google'
+import { Fraunces, IBM_Plex_Mono } from 'next/font/google'
 import { ThemeProvider } from 'next-themes'
 import './globals.css'
 
-const instrumentSerif = Instrument_Serif({
-  weight: ['400'],
+const fraunces = Fraunces({
   subsets: ['latin'],
-  variable: '--font-instrument-serif',
+  variable: '--font-fraunces',
   display: 'swap',
+  axes: ['opsz'],
 })
 
 const ibmPlexMono = IBM_Plex_Mono({
@@ -53,7 +53,7 @@ export default function RootLayout({
     <html
       lang="en"
       suppressHydrationWarning
-      className={`${instrumentSerif.variable} ${ibmPlexMono.variable}`}
+      className={`${fraunces.variable} ${ibmPlexMono.variable}`}
     >
       <body>
         <ThemeProvider

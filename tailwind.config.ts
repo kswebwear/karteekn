@@ -19,7 +19,7 @@ const config: Config = {
         },
       },
       fontFamily: {
-        serif: ['var(--font-instrument-serif)', 'Georgia', 'serif'],
+        serif: ['var(--font-fraunces)', 'Georgia', 'serif'],
         mono: ['var(--font-ibm-plex-mono)', 'Menlo', 'monospace'],
       },
       typography: {
@@ -27,9 +27,9 @@ const config: Config = {
           css: {
             color: '#e5e7eb',
             a: { color: '#f59e0b', '&:hover': { color: '#fbbf24' } },
-            h1: { color: '#ffffff', fontFamily: 'var(--font-instrument-serif)' },
-            h2: { color: '#ffffff', fontFamily: 'var(--font-instrument-serif)' },
-            h3: { color: '#ffffff', fontFamily: 'var(--font-instrument-serif)' },
+            h1: { color: '#ffffff', fontFamily: 'var(--font-fraunces)' },
+            h2: { color: '#ffffff', fontFamily: 'var(--font-fraunces)' },
+            h3: { color: '#ffffff', fontFamily: 'var(--font-fraunces)' },
             h4: { color: '#f3f4f6' },
             strong: { color: '#ffffff' },
             code: {
