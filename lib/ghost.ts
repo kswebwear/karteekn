@@ -1,7 +1,7 @@
 import type { PostCard, FullPost, Tag, Author } from './types'
 
-const GHOST_URL = process.env.GHOST_URL!
-const GHOST_KEY = process.env.GHOST_CONTENT_API_KEY!
+const GHOST_URL = process.env.GHOST_URL!.trim()
+const GHOST_KEY = process.env.GHOST_CONTENT_API_KEY!.trim()
 const API_BASE = `${GHOST_URL}/ghost/api/content`
 
 async function ghostFetch<T>(
