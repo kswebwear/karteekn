@@ -1,6 +1,6 @@
 import Link from 'next/link'
-import Image from 'next/image'
 import type { PostCard } from '@/lib/types'
+import SafeImage from '@/components/shared/SafeImage'
 import TagBadge from '@/components/shared/TagBadge'
 import ReadingTime from '@/components/shared/ReadingTime'
 import { formatDate } from '@/lib/utils'
@@ -20,7 +20,7 @@ export default function FeaturedPost({ post }: FeaturedPostProps) {
         <article className="amber-glow grid gap-0 overflow-hidden rounded-2xl border border-[#2a2a2a] bg-[#1a1a1a] transition-all duration-300 hover:border-amber-500/40 lg:grid-cols-2">
           {post.feature_image ? (
             <div className="relative h-64 lg:h-auto">
-              <Image
+              <SafeImage
                 src={post.feature_image}
                 alt={post.title}
                 fill

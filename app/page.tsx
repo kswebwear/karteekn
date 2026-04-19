@@ -6,7 +6,7 @@ import ArticleGrid from '@/components/home/ArticleGrid'
 import NewsletterCTA from '@/components/home/NewsletterCTA'
 import { getPosts, getTags } from '@/lib/ghost'
 
-export const revalidate = 3600
+export const revalidate = 300
 
 export const metadata: Metadata = {
   title: 'Karteek N — ServiceNow Architect',

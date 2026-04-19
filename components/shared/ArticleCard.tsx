@@ -1,8 +1,8 @@
 import Link from 'next/link'
-import Image from 'next/image'
 import type { PostCard } from '@/lib/types'
 import TagBadge from './TagBadge'
 import ReadingTime from './ReadingTime'
+import SafeImage from './SafeImage'
 import { formatDate, truncate } from '@/lib/utils'
 
 interface ArticleCardProps {
@@ -15,7 +15,7 @@ export default function ArticleCard({ post }: ArticleCardProps) {
       <article className="amber-glow h-full rounded-xl border border-[#2a2a2a] bg-[#1a1a1a] p-6 transition-all duration-300 hover:border-amber-500/40 hover:bg-[#1f1f1f]">
         {post.feature_image && (
           <div className="relative mb-4 h-48 w-full overflow-hidden rounded-lg">
-            <Image
+            <SafeImage
               src={post.feature_image}
               alt={post.title}
               fill
