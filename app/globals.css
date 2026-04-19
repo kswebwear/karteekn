@@ -1,0 +1,110 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    color-scheme: dark;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-[#0e0e0e] text-gray-100 font-mono antialiased;
+  }
+
+  ::selection {
+    @apply bg-amber-500/30 text-amber-100;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    @apply bg-[#0e0e0e];
+  }
+  ::-webkit-scrollbar-thumb {
+    @apply bg-gray-700 rounded-full;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-amber-500/60;
+  }
+}
+
+@layer components {
+  /* Hero grid background */
+  .bg-grid {
+    background-image:
+      linear-gradient(rgba(245, 158, 11, 0.04) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(245, 158, 11, 0.04) 1px, transparent 1px);
+    background-size: 48px 48px;
+  }
+
+  /* Noise overlay */
+  .bg-noise {
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
+  }
+
+  /* Amber glow on focus/hover */
+  .amber-glow {
+    box-shadow: 0 0 0 0 rgba(245, 158, 11, 0);
+    transition: box-shadow 0.3s ease;
+  }
+  .amber-glow:hover {
+    box-shadow: 0 0 20px rgba(245, 158, 11, 0.15);
+  }
+
+  /* Reading progress bar */
+  #reading-progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 2px;
+    background: linear-gradient(90deg, #f59e0b, #fbbf24);
+    z-index: 9999;
+    transition: width 0.1s linear;
+  }
+}
+
+/* Ghost HTML content styles */
+.ghost-content img {
+  @apply rounded-lg w-full h-auto my-8;
+}
+
+.ghost-content figure {
+  @apply my-8;
+}
+
+.ghost-content figcaption {
+  @apply text-sm text-gray-500 text-center mt-2 font-mono;
+}
+
+.ghost-content .kg-card {
+  @apply my-8;
+}
+
+.ghost-content .kg-image-card img {
+  @apply rounded-lg;
+}
+
+.ghost-content .kg-bookmark-card {
+  @apply border border-[#2a2a2a] rounded-lg p-4 no-underline;
+}
+
+/* Highlight.js theme overrides */
+.hljs {
+  background: #111111 !important;
+  color: #e5e7eb !important;
+}
+
+/* Code block copy button container */
+.code-block-wrapper {
+  position: relative;
+}
+
+.code-block-wrapper:hover .copy-btn {
+  opacity: 1;
+}
