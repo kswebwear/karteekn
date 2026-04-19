@@ -44,8 +44,12 @@ export default function ArticleCard({ post }: ArticleCardProps) {
             <time className="text-xs text-gray-600" dateTime={post.published_at}>
               {formatDate(post.published_at)}
             </time>
-            <span className="text-gray-700">·</span>
-            <ReadingTime minutes={post.reading_time} />
+            {post.reading_time && (
+              <>
+                <span className="text-gray-700">·</span>
+                <ReadingTime minutes={post.reading_time} />
+              </>
+            )}
           </div>
         </div>
       </article>
